@@ -53,3 +53,9 @@ fn plus_one(x: Option<i32>) -> Option<i32> {
 let five = Some(5);
 let six = plus_one(five);
 let none = plus_one(None);
+
+if let Some(5) = five {
+    println!("five");
+} else {
+    println!("empty");
+}
