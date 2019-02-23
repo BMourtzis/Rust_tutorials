@@ -1,5 +1,6 @@
-pub mod instrument {
-    pub fn clarinet() {
-        //function body 
-    }
+pub mod instrument;
+
+pub fn clarinet() {
+    //function body 
 }
+

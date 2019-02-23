@@ -1,7 +1,8 @@
-use sound;
-use sound::instrument::clarinet as instrClarinet;
+mod sound;
+
+use sound::instrument;
 
 fn lib() {
     sound::clarinet();
-    instrClarinet();
+    instrument::clarinet();
 }
