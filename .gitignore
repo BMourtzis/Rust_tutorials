@@ -1,5 +1,8 @@
+# Rust compiler files
 */target
+
+# vs code files
 */.vs/slnx.sqlite
-*/v15/.suo
 */.vs/ProjectSettings.json
 */.vs/VSWorkspaceState.json
+*/.vs/*/v15/.suo
