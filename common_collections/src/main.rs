@@ -1,5 +1,7 @@
 fn main() {
     new_vector();
+    new_string();
+    new_hasmaps();
 }
 
 fn new_vector() {
@@ -27,5 +29,26 @@ fn new_vector() {
 }
 
 fn new_string() {
+    let mut s = String::new();
+    s = String::from("initial contents");
+    s = String::from("Ελληνικά στρίνγκ");
+
+    s.push_str("bar");
+
+    let s2 = String::from("hello");
+
+    let s3 = s + &s2;
+
+    let s4 = format!("{}-{}", s3, s2);
+
+    // NOTE: string are stored are u8 vectors
+    // user .chars();
+
+    for c in s4.chars() {
+        println!("{}", c);
+    }
+}
+
+fn new_hasmaps() {
     
 }
