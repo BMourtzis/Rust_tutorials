@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 fn main() {
     new_vector();
     new_string();
@@ -50,5 +52,18 @@ fn new_string() {
 }
 
 fn new_hasmaps() {
-    
+     let mut scores = HashMap::new();
+
+     scores.insert(String::from("Blue"), 150);
+     scores.insert(String::from("Yellow"), 50);
+
+     let teams = vec![String::from("Blue"), String::from("Yellow")];
+     let initial_scores = vec![10, 50];
+
+     let scores2: HashMap<_, _> = teams.iter().zip(initial_scores.iter()).collect();
+
+     let score = scores.get(&String::from("Yellow"));
+
+     let new_score = scores.entry(String::from("Yellow")).or_insert(0);
+     *new_score += 1;
 }
