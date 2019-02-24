@@ -1,8 +1,11 @@
 fn main() {
-    get_largest(&vec![1,2,3,4]);
+    let mut vec = vec![1,2,3,4];
+    let something = get_largest(&vec);
+
+    vec.push(5);
 }
 
-fn get_largest<T: PartialOrd + Copy>(list: &[T]) -> T {
+fn get_largest_copy<T: PartialOrd + Copy>(list: &[T]) -> T {
     let mut largest = list[0];
 
     for &item in list {
@@ -12,6 +15,18 @@ fn get_largest<T: PartialOrd + Copy>(list: &[T]) -> T {
     }
 
     largest
+}
+
+fn get_largest<T: PartialOrd> (list: &[T]) -> &T {
+    let mut largest = &list[0];
+
+    for item in list {
+        if item > &largest {
+            largest = item;
+        }
+    }
+
+    &largest
 }
 
 #[derive(Debug)]
